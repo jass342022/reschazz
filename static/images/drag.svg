@@ -1,0 +1,18 @@
+<svg width="148" height="148" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_509_1401)">
+<rect x="19" y="19" width="110" height="110" rx="55" fill="#FFAFC4"/>
+<path d="M45.64 79.424V69.56H47.848C50.464 69.56 52.6 71.096 52.6 74.504C52.6 77.912 50.464 79.424 47.848 79.424H45.64ZM47.992 83C53.128 83 56.56 79.76 56.56 74.504C56.56 69.248 53.128 65.984 48.016 65.984H41.848V83H47.992ZM67.4461 83H71.6221L68.1661 76.112C70.2541 75.368 71.5261 73.616 71.5261 71.312C71.5261 68.288 69.3661 65.984 66.0061 65.984H59.2621V83H63.0541V76.664H64.3981L67.4461 83ZM63.0541 73.4V69.272H65.2861C66.8461 69.272 67.6861 70.064 67.6861 71.336C67.6861 72.536 66.8461 73.4 65.2861 73.4H63.0541ZM85.7089 83H89.8369L83.5009 65.984H79.1089L72.7009 83H76.6849L77.9089 79.544H84.4849L85.7089 83ZM81.2449 70.208L83.2849 76.088H79.1569L81.2449 70.208ZM106.716 83V73.904H98.0524V77.12H103.164C102.948 78.08 101.772 79.904 98.9644 79.904C96.2044 79.904 93.8524 78.056 93.8524 74.504C93.8524 70.712 96.5644 69.176 98.8684 69.176C101.7 69.176 102.828 71.096 103.092 72.152L106.74 70.88C105.996 68.504 103.74 65.624 98.8684 65.624C94.0684 65.624 90.0124 69.152 90.0124 74.504C90.0124 79.88 93.9004 83.36 98.6284 83.36C101.052 83.36 102.66 82.352 103.404 81.272L103.644 83H106.716Z" fill="#191919"/>
+</g>
+<defs>
+<filter id="filter0_d_509_1401" x="0" y="0" width="148" height="148" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="9.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_509_1401"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_509_1401" result="shape"/>
+</filter>
+</defs>
+</svg>

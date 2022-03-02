@@ -1,0 +1,251 @@
+.Studios__container {
+	position: relative;
+	z-index: 100;
+	transition: all 500ms ease-in-out;
+	background-color: $cPink;
+}
+
+
+.Studios {
+	position: relative;
+	min-height: 1400px;
+	padding: 170px 0 800px 0;
+	transition: opacity 520ms ease-in-out;
+}
+
+.Studios {
+	opacity: 0;
+}
+
+.Studios.is-visible {
+	opacity: 1;
+}
+
+.Studios__listItem {
+	top: var(--top);
+	display: block;
+	width: 100%;
+	transition: all 250ms ease-in-out;
+}
+
+.Studios__listItemHeader,
+.Studios__listItemData {
+	position: relative;
+	z-index: 10;
+}
+
+.Studios__listItemHeader.Button {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.Studios__listItem.is-selected .Studios__listItemToggle {
+	pointer-events: auto;
+}
+.Studios__list {
+	position: absolute;
+	left: var(--left);
+}
+.Studios__listItemTitle {
+	font-weight: bold;
+	color: $cWhite;
+	line-height: 155%;
+	font-size: var(--big-font);
+	transition: all 250ms ease-in-out;
+}
+.Studios__listItemData {
+	color: $cBlack;
+	font-weight: normal;
+	height: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 250ms ease-in-out;
+	font-size: 0.2em;
+	width: 300px;
+	line-height: 135%;
+}
+
+.Studios__listItem {
+	transition: all 250ms ease-in-out;
+}
+.Studios__listItem.is-open {
+	padding-bottom: 200px;
+}
+
+.Studios__listItem.is-open .Studios__listItemData {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+.Studios__listItem.is-selected .Studios__listItemToggle {
+	opacity: 1;
+}
+
+.Studios__listItem.is-selected .Studios__listItemTitle {
+	color: $cPureBlack;
+}
+.Studios__listItem.is-open .Studios__listItemToggle {
+	background: url(/images/minus.svg) no-repeat;
+	//background-size: cover;
+
+	z-index: 100;
+
+	width: 30px;
+	height: 40px;
+	margin: 0 0 0 16px;
+}
+.Studios__listItemToggle {
+	opacity: 0;
+	width: 30px;
+	height: 40px;
+	margin: 0 0 0 16px;
+	//border-radius: 100%;
+	background: url(/images/plus.svg) no-repeat;
+	//background-size: cover;
+	transition: all 250ms ease-in-out;
+	pointer-events: none;
+	z-index: 100;
+}
+
+.Studios__listItem.is-selected .Studios__picture {
+	opacity: 1;
+	right: 0;
+}
+
+.Studios__picture img {
+	width: 100%;
+}
+.Studios__picture {
+	position: fixed;
+	height: 80%;
+	bottom: 0;
+	right: 0;
+	transition: all 250ms ease-in-out;
+	transition-delay: 520ms;
+	pointer-events: none;
+	z-index: 1;
+	width: 500px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	opacity: 0;
+}
+
+.Studios__listItemDataTeam {
+	width: 30%;
+	display: block;
+	text-transform: uppercase;
+	color: $cBlack;
+	margin: 52px 0 0;
+	border-bottom: 1px solid $cBlack;
+	font-size: 18px;
+	line-height: 135%;
+	font-weight: bold;
+	cursor: pointer;
+}
+.Studios__listItemDataEmail {
+	font-weight: bold;
+	color: $cBlack;
+	line-height: 135%;
+	font-size: 20px;
+}
+.Studios__listItemDataAddress {
+	font-weight: 200;
+	font-size: 20px;
+	line-height: 135%;
+	margin: 0 0 4px 0;
+}
+.Studios__arrow {
+	transition: opacity 250ms ease-in-out;
+	transition-delay: 350ms;
+	background: url(/images/arrow.svg) no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 3em;
+	left: -120px;
+	width: 248px;
+	height: 104px;
+	z-index: 100;
+}
+
+.Studios__listItem.is-open .Studios__arrow {
+	opacity: 1;
+}
+.Studios-we {
+	display: none;
+}
+
+@media all and (min-width: 1440px) {
+	.Studios__list {
+		left: 28%;
+	}
+	.Studios-we{
+		display: none;
+	}
+}
+
+
+
+@media all and (max-width: 640px) {
+	
+	.Studios__container{
+		height: 500px;
+	}
+	.Studios-we{
+		display: block;
+		margin-left: 30px;
+	}
+	.Studios {
+		padding: 5em 0;
+		min-height: auto;
+		position: relative;
+	}
+
+	.Studios__list {
+		position: relative;
+		left: 0;
+		bottom: auto;
+	}
+
+	.Studios-we {
+		display: block;
+		font-weight: bold;
+		font-size: 1.3em;
+	}
+
+	.Studios__picture {
+		display: none;
+	}
+
+	.Studios__listItemTitle {
+		font-size: 1em;
+		color: $cBlack;
+	}
+
+	.Studios__listItemDataTeam {
+		margin-top: 12px;
+		margin-left: 1.5em;
+	}
+	
+	.Studios__listItemDataEmail,
+	.Studios__listItemDataAddress {
+		font-size: 17px;
+		margin: 0 0 4px 1.6em;
+	}
+
+	.Studios__listItem {
+		position: relative;
+	}
+	.Studios__listItem.is-open {
+		padding-bottom: 140px;
+	}
+	.Studios__listItemHeader {
+		margin-left: 0.8em;
+	}
+
+	.Studios__listItemTitle {
+		line-height: 135%;
+	}
+	
+}

@@ -1,0 +1,140 @@
+.cases_sucess {
+	position: relative;
+	overflow: hidden;
+	transition: opacity 250ms ease-in-out;
+	z-index: 100;
+	background-color: $cWhite;
+	.pointed {
+		width: 70px;
+		height: 70px;
+		background-color: $cPink;
+		border-radius: 50%;
+		margin-bottom: 20rem;
+		z-index: 1000;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__carousel {
+		color: $cBlackish;
+		padding: 170px 0 0 0;
+		top: 250px;
+		&__image-container {
+			height: 410px;
+			img {
+				width: 100%;
+				height: 410px;
+				position: relative;
+				z-index: 10000;
+				object-fit: cover; 
+			}
+		}
+		&__header {
+			margin-left:  var(--we-left);
+		}
+		&__detail {
+			color: $cBlackish;
+			&--title {
+				margin-top: 32px;
+				font-style: normal;
+				font-weight: bold;
+				text-align: start;
+				font-size: 16px;
+			}
+			&--title:hover {
+				text-decoration: underline;
+			}
+			&--content {
+				text-align: start;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 14px;
+			}
+		}
+		&__we {
+			display: none;
+		}
+		&__title {
+			margin-left: 250px;
+			pointer-events: none;
+			line-height: 155%;
+			color: $cPureBlack;
+			transition: opacity 250ms ease-in-out;
+			font-size: 86px;
+		}
+		&__slide {
+			img {
+				cursor: url('/images/open_hand.svg'), auto;
+			}
+		}
+		&__slide:active {
+			img {
+				cursor: url('/images/closed_hand.svg'), auto;
+			}
+		}
+	}
+}
+.cases_sucess__carousel__slide--case:active {
+	cursor: url(/images/closed_hand.svg), auto;
+}
+
+.cases_sucess__carousel__slide--case {
+	width: auto;
+	height: 410px;
+}
+@media all and (min-width: 748px) {
+	.cases_sucess {
+		height: 1150px;
+	}
+	.Services__header {
+		left: var(--we-left);
+	}
+	.cases_sucess__carousel__slide {
+		margin: 100px 0 var(--top)  var(--we-left);
+	}
+	.Services__title {
+		left: var(--we-left);
+		margin-left: var(--we-left);
+	}
+
+}
+@media all and (max-width: 748px) {
+	.cases_sucess {
+		height: 1000px;
+	}
+	.cases_sucess {
+		.VueCarousel-wrapper {
+			padding: 0.8em;
+		}
+	}
+	.cases_sucess__carousel__image-container img {
+		width: 292px;
+	}
+
+	.cases_sucess__carousel__detail--content {
+		margin-right: 20px;
+	}
+	.cases_sucess__carousel__slide {
+		.VueCarousel-inner {
+			width: 333px;
+			margin-left: 10px;
+		}
+	}
+	.cases__carousel__title{
+		padding: 0.8em;
+	}
+	.cases_sucess__carousel__header{
+		margin-left: 0;
+	}
+}
+@media all and (min-width: 1800px) {
+	.cases_sucess__carousel {
+		margin-left: 10%;
+	}
+	.cases_sucess__carousel__header,
+	.cases_sucess__carousel__slide{
+		margin: 0;
+	}
+}
+

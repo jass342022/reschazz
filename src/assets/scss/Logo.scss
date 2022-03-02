@@ -1,0 +1,29 @@
+.Logo {
+	background: url(/images/logo_white.svg) no-repeat;
+	background-size: contain;
+	position: fixed;
+	top: 2em;
+	left: var(--we-left);
+	width: 113px;
+	height: 25px;
+	z-index: 100000000000;
+}
+.Logo.is-black {
+	background-image: url(/images/logo_black.svg);
+}
+
+@media all and (max-width: 1440px) {
+	.Logo {
+		left: 7%;
+	}
+}
+
+@media all and (max-width: 640px) {
+	.Logo {
+		position: absolute;
+		top: 1.5em;
+		left: 1.5em;
+		width: 82px;
+		height: 18px;
+	}
+}

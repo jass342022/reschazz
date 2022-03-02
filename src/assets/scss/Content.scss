@@ -1,0 +1,43 @@
+.Content {
+  position: relative;
+  width: 100%;
+  height:  1000px;
+  z-index: 100;
+  background-color: $cBlack;
+}
+.Content__item {
+  position: absolute;
+}
+
+.Content__title.is-dark {
+  color: $cBlack;
+}
+
+.Content__title {
+  position: fixed;
+  top: var(--top);
+  line-height: 135%;
+  left: var(--we-left);
+  color: $cWhite;
+  text-align: right;
+  z-index: 1000;
+  pointer-events: none;
+  transition: all 250ms ease-in-out;
+}
+
+@media all and (max-width: 1440px) {
+
+  .Content__title {
+    left: 7%;
+  }
+
+}
+
+@media all and (max-width: 640px) {
+  .Content__title {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+}
+

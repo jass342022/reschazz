@@ -1,0 +1,74 @@
+.VideoPlayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.VideoPlayer.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+}
+.Player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background: $cPureBlack;
+}
+
+.Player__header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 35px var(--we-left);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 10000;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.36) 0%, rgba(148, 148, 148, 0.45) 24.42%, rgba(255, 255, 255, 0) 100%);
+  mix-blend-mode: multiply;
+}
+
+.Player__video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+.Player.is-playing .Player__video {
+  opacity: 1;
+}
+
+.Player__close:after {
+  content: '✕';
+  font-family:-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,Ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  font-size: 1.3em;
+  font-weight: 200;
+  color: #000;
+}
+
+.Player__close {
+  display: block;
+  opacity: 1;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 30px;
+  color: red;
+  text-align: center;
+}
+
+.Player__close:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+  .Player__header {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}

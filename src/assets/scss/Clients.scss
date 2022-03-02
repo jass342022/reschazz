@@ -1,0 +1,194 @@
+.Clients {
+	position: relative;
+	padding: 170px  0 100px 0;
+	opacity: 0;
+	transition: opacity 250ms ease-in-out;
+	z-index: 100;
+	height: 1000px;
+//	background-color: $cBlack;
+}
+
+.Clients__title {
+	position: fixed;
+	top: var(--top);
+	line-height: 135%;
+	text-align: center;
+	color: $cWhite;
+	opacity: 0;
+	width: 100%;
+	font-size: 3.5vw;
+	font-weight: bold;
+	transition: opacity 250ms ease-in-out;
+	display: none;
+}
+
+.Clients__logos {
+	
+	margin: auto;
+	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 70px;
+	justify-content: center;
+	align-items: center;
+}
+
+.Client__logo {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	height: 40px;
+}
+
+.Client__logo.is-abbott {
+	background-image: url(/images/logos/abbott.svg);
+	height: 35px;
+}
+.Client__logo.is-bancobce {
+	background-image: url(/images/logos/bancobce.svg);
+	height: 16px;
+}
+.Client__logo.is-bankinter {
+	background-image: url(/images/logos/bankinter.svg);
+	height: 19px;
+}
+.Client__logo.is-comgas {
+	background-image: url(/images/logos/comgas.svg);
+	height: 25px;
+}
+.Client__logo.is-correos {
+	background-image: url(/images/logos/correos.svg);
+	height: 37px;
+}
+.Client__logo.is-edp {
+	background-image: url(/images/logos/edp.svg);
+	height: 42px;
+}
+.Client__logo.is-globosat {
+	background-image: url(/images/logos/globosat.svg);
+	height: 20px;
+}
+.Client__logo.is-gpa {
+	background-image: url(/images/logos/gpa.svg);
+	height: 47px;
+}
+.Client__logo.is-leroy {
+	background-image: url(/images/logos/leroy.svg);
+	height: 66px;
+}
+.Client__logo.is-nttdata {
+	background-image: url(/images/logos/nttdata.svg);
+	height: 18px;
+}
+.Client__logo.is-renfe {
+	background-image: url(/images/logos/renfe.svg);
+	height: 37px;
+}
+.Client__logo.is-santander {
+	background-image: url(/images/logos/santander.svg);
+	height: 27px;
+}
+.Client__logo.is-vivo {
+	background-image: url(/images/logos/vivo.svg);
+	height: 29px;
+}
+.Client__logo.is-zurich {
+	background-image: url(/images/logos/zurich.svg);
+	height: 62px;
+}
+.Client__logo.is-embraer {
+	background-image: url(/images/logos/embraer.svg);
+	height: 27px;
+}
+.Client__logo.is-inbevab {
+	background-image: url(/images/logos/inbevab.svg);
+	height: 28px;
+}
+.Client__logo.is-vidacaixa {
+	background-image: url(/images/logos/vidacaixa.svg);
+	height: 35px;
+}
+
+@media all and (max-width: 640px) {
+	.Clients{
+		height: 500px;
+	}
+	.Clients__logos {
+		width: 100%;
+		display: grid;
+		margin: auto;
+		padding: 0 1.8em;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-gap: 32px;
+		justify-content: center;
+		align-items: center;
+	}
+	.Client__logo:before {
+		color: #fff;
+		font-size: 1em;
+		position: absolute;
+	}
+	.Client__logo[data-name='zurich']:before {
+		content: 'Zurich';
+	}
+	.Client__logo[data-name='santander']:before {
+		content: 'Santander';
+	}
+	.Client__logo[data-name='correos']:before {
+		content: 'Correos';
+	}
+	.Client__logo[data-name='vivo']:before {
+		content: 'Vivo';
+	}
+	.Client__logo[data-name='abbott']:before {
+		content: 'Abbot';
+	}
+	.Client__logo[data-name='bancobce']:before {
+		content: 'Banco Bice';
+	}
+	.Client__logo[data-name='bankinter']:before {
+		content: 'Bankinter';
+	}
+	.Client__logo[data-name='comgas']:before {
+		content: 'Comgas';
+	}
+	.Client__logo[data-name='edp']:before {
+		content: 'Edp';
+	}
+	.Client__logo[data-name='globosat']:before {
+		content: 'Globosat';
+	}
+	.Client__logo[data-name='gpa']:before {
+		content: 'GPA';
+	}
+	.Client__logo[data-name='leroy']:before {
+		content: 'Leroy';
+	}
+	.Client__logo[data-name='nttdata']:before {
+		content: 'NTT Data';
+	}
+	.Client__logo[data-name='renfe']:before {
+		content: 'Renfe';
+	}
+	.Client__logo[data-name='embraer']:before {
+		content: 'Embraer';
+	}
+	.Client__logo[data-name='inbevab']:before {
+		content: 'AbInBev';
+	}
+	.Client__logo[data-name='vidacaixa']:before {
+		content: 'VidaCaixa';
+	}
+
+	.Clients__title {
+		left: 0.8em;
+		top: 1.8em;
+	}
+	.Client__logo {
+		position: relative;
+		background: none !important;
+		height: auto !important;
+	}
+}

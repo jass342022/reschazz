@@ -1,0 +1,135 @@
+.Footer {
+	position: relative;
+	width: 100%;
+	padding: 40px var(--we-left);
+	background: $cBlackish;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+}
+
+.Footer__logo {
+	background: url(/images/logo_white.svg) no-repeat;
+	background-size: contain;
+	top: 2.7em;
+	margin: 0 120px 0 0;
+	width: 100px;
+	height: 28px;
+}
+
+.Footer__left {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Footer__text {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Footer__link {
+	display: block;
+	margin: 0 0 0 20px;
+	transition: all 250ms ease-in-out;
+}
+
+.Footer__linkIcon {
+	display: none;
+}
+
+.Footer__link:hover {
+	color: $cWhite;
+}
+
+@media all and (max-width: 1440px) {
+	.Footer {
+		padding: 40px 7%;
+	}
+}
+
+@media all and (max-width: 939px) {
+	.Footer__we {
+		display: none;
+	}
+
+	.Footer__logo {
+		margin: 0;
+	}
+
+	.Footer__left {
+		width: 100%;
+		flex: 2;
+	}
+
+	.Footer__career {
+		flex: 1;
+		text-align: center;
+	}
+
+	.Footer__text {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media all and (max-width: 740px) {
+	.Footer {
+		justify-content: center;
+		flex-direction: column;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.Footer__left {
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.Footer__text {
+		margin: 0 0 48px;
+		justify-content: space-around;
+	}
+
+	.Footer__logo {
+		margin: 0 auto 48px auto;
+	}
+
+	.Footer__link {
+		margin: 0 10px;
+	}
+
+	.Footer__text span {
+		display: none;
+	}
+
+	.Footer__linkText {
+		display: none;
+	}
+
+	.Footer__link.is-linkedin .Footer__linkIcon {
+		display: block;
+		width: 27px;
+		height: 25px;
+		background: url(/images/linkedin.svg) no-repeat;
+		background-size: contain;
+	}
+
+	.Footer__link.is-instagram .Footer__linkIcon {
+		display: block;
+		width: 25px;
+		height: 25px;
+		background: url(/images/instagram.svg) no-repeat;
+		background-size: contain;
+	}
+
+	.Footer__link.is-twitter .Footer__linkIcon {
+		display: block;
+		width: 26px;
+		height: 21px;
+		background: url(/images/twitter.svg) no-repeat;
+		background-size: contain;
+	}
+}

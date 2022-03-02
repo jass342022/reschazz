@@ -1,0 +1,171 @@
+.Sentence {
+	top: var(--top);
+	left: var(--left);
+	width: calc(100% - var(--left));
+	/* transition: opacity 250ms ease-in-out; */
+}
+
+.Sentence__we {
+	//display: none;
+}
+
+.Sentence__text {
+	user-select: none;
+	position: relative;
+	display: inline-block;
+	line-height: 155%;
+	z-index: 10;
+}
+
+.Sentence__background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	transition: opacity 250ms ease-in-out;
+	pointer-events: none;
+}
+
+.Sentence.is-builds .Sentence__background {
+	background: url(/images/gifs/builds.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-care .Sentence__background {
+	background: url(/images/gifs/care.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-creative .Sentence__background {
+	background: url(/images/gifs/creative.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-diverse .Sentence__background {
+	background: url(/images/gifs/diverse.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-dreams .Sentence__background {
+	background: url(/images/gifs/dreams.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-enables .Sentence__background {
+	background: url(/images/gifs/enables.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-meaningfulexperiences .Sentence__background {
+	background: url(/images/gifs/meaningfulexperiences.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-honesty .Sentence__background {
+	background: url(/images/gifs/honesty.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-ideates .Sentence__background {
+	background: url(/images/gifs/ideates.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-innovativestrategies .Sentence__background {
+	background: url(/images/gifs/new.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-newbusinessmodels .Sentence__background {
+	background: url(/images/gifs/newmodels.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-passion .Sentence__background {
+	background: url(/images/gifs/passion.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.Sentence.is-shapes .Sentence__background {
+	background: url(/images/gifs/shapes.gif);
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+@media all and (min-width: 1440px) {
+	.Sentence {
+		left: 10%;
+	}
+}
+
+@media all and (max-width: 1440px) {
+	.Sentence {
+		left: 25%;
+	}
+}
+
+@media all and (max-width: 640px) {
+	.Sentence {
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0.8em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.Sentence__text {
+		line-height: 125%;
+	}
+
+	.Sentence__we {
+		display: inline;
+	}
+
+	.Sentence.is-builds .Sentence__background,
+	.Sentence.is-care .Sentence__background,
+	.Sentence.is-creative .Sentence__background,
+	.Sentence.is-diverse .Sentence__background,
+	.Sentence.is-dreams .Sentence__background,
+	.Sentence.is-enables .Sentence__background,
+	.Sentence.is-meaningfulexperiences .Sentence__background,
+	.Sentence.is-honesty .Sentence__background,
+	.Sentence.is-ideates .Sentence__background,
+	.Sentence.is-innovativestrategies .Sentence__background,
+	.Sentence.is-newbusinessmodels .Sentence__background,
+	.Sentence.is-passion .Sentence__background,
+	.Sentence.is-shapes .Sentence__background {
+		background-repeat: repeat;
+		background-size: 100%;
+	}
+}

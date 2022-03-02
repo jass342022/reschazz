@@ -1,0 +1,74 @@
+.Playground {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: $cWhite;
+	z-index: 100;
+}
+
+.Playground__arrow {
+	height: 30px;
+	width: 30px;
+	background: url(/images/left_arrow.svg) no-repeat;
+	background-size: 30%;
+	position: absolute;
+	top: 50%;
+	left: 24px;
+	padding: 40px 30px;
+	z-index: 1000;
+	cursor: pointer;
+}
+
+.Playground__header {
+	position: fixed;
+	line-height: 155%;
+	top: var(--top);
+	left: var(--left);
+}
+
+.Playground__we {
+//	display: none;
+	position: relative;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: $cWhite;
+}
+
+.Playground__title {
+	display: block;
+	position: relative;
+	line-height: 155%;
+	font-size: var(--big-font);
+	font-weight: bold;
+	color: $cBlack;
+}
+
+.Playground__canvas {
+	width: 100%;
+	height: 100%;
+	cursor: none;
+}
+
+@media all and (max-width: 1440px) {
+	.Playground__header {
+		left: 25%;
+	}
+}
+
+@media all and (max-width: 640px) {
+	.Playground__title,
+	.Playground__we {
+		display: block;
+		line-height: 125%;
+	}
+	.Playground__header {
+		top: 60px;
+		left: 1.7em;
+	}
+	.Playground__arrow {
+		height: 20px;
+		width: 20px;
+		left: 35px;
+	}
+}

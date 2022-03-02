@@ -1,0 +1,26 @@
+.Home {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-in-out;
+}
+
+.is-large {
+  font-weight: bold;
+  line-height: 155%;
+  user-select: none;
+  font-size: var(--big-font);
+}
+.is-playing .VideoPlayer {
+  z-index: 1000000;
+}
+
+@media all and (max-width: 640px) {
+  .is-team .Imaginarium,
+  .is-team .Header,
+  .is-team .Content,
+  .is-team .Footer,
+  .is-team .Clients {
+    display: none;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,164 @@
+.is-team .Header {
+	display: none;
+}
+
+.Header {
+	position: fixed;
+	top: 2em;
+	right: var(--we-left);
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	transition: opacity 250ms ease-in-out;
+
+	z-index: 100000;
+}
+
+.Header.is-hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.Header__link {
+	margin: 0 0 0 25px;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 1em;
+	color: $cWhite;
+	transition: color 250ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+.Header__link .Button__icon {
+	display: none;
+}
+
+@media all and (max-width: 1440px) {
+	.Header {
+		right: 7%;
+	}
+}
+
+@media all and (max-width: 640px) {
+	.Header {
+		position: absolute;
+	}
+	.Header__link {
+		margin-left: 15px;
+	}
+	.Header__link.is-imaginarium:before {
+		content: '';
+		position: relative;
+		width: 10px;
+		height: 10px;
+	}
+	.Header__link .Button__icon {
+		display: block;
+		top: -5px;
+		position: relative;
+	}
+	.Header__link .Button__text {
+		display: none;
+	}
+	.Header__link.is-weare {
+		display: none;
+	}
+	.Header__link.is-clients {
+		display: none;
+	}
+	.Header__link.is-imaginarium .Button__icon,
+	.Header__link.is-imaginarium.is-gray,
+	.Header__link.is-imaginarium.is-white,
+	.Header__link.is-imaginarium {
+
+		display: none;
+	}
+
+	.Header__link.is-studios .Button__icon {
+		//background: url(/images/eye.svg) no-repeat;
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+	.Header__link.is-studios.is-gray-mobile .Button__icon,
+	.Header__link.is-studios.is-black .Button__icon {
+		background: url(/images/location.svg) no-repeat;
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+	.Header__link.is-studios.is-pink .Button__icon {
+		background: url(/images/location.svg) no-repeat;
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+
+	.Header__link.is-studios.is-white-mobile .Button__icon {
+		background: url(/images/location.svg) no-repeat;
+		filter: invert(100%);
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+	.Header__link.is-case.is-white-mobile .Button__icon{
+		background: url(/images/offering.svg) no-repeat;
+		filter: invert(100%);
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+	.Header__link.is-services.is-white-mobile .Button__icon {
+		background: url(/images/projects.svg) no-repeat;
+		filter: invert(100%);
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+	.Header__link.is-case.is-gray-mobile .Button__icon{
+		background: url(/images/offering.svg) no-repeat;
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+
+	
+	.Header__link.is-services.is-gray-mobile .Button__icon,
+	.Header__link.is-services.is-pink-mobile .Button__icon
+	
+	{
+		background: url(/images/projects.svg) no-repeat;
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+
+	.Header__link.is-services.is-pink .Button__icon {
+		background: url(/images/offering.svg) no-repeat;
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+	/*.Header__link.is-studios .Button__icon {
+		background: url(/images/location.svg) no-repeat;
+		filter: invert(100%);
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+	.Header__link.is-case .Button__icon {
+		background: url(/images/offering.svg) no-repeat;
+		filter: invert(100%);
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}
+	.Header__link.is-services .Button__icon {
+		background: url(/images/projects.svg) no-repeat;
+		filter: invert(100%);
+		background-size: contain;
+		width: 19px;
+		height: 17px;
+	}*/
+}

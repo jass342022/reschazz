@@ -1,0 +1,24 @@
+.Marquee {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: $cBlack;
+  font-size: 1.4em;
+  background: $cWhite;
+  line-height: 135%;
+  padding: .4em 0;
+  user-select: none;
+  pointer-events: none;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1000000;
+}
+
+@media all and (max-width: 640px) {
+
+  .Marquee {
+    font-size: 1em;
+  }
+
+}
+

@@ -1,0 +1,225 @@
+backend:
+    name: github
+    repo: everis-dex/chazz-website2
+    branch: main
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
+
+media_folder: static/assets
+public_folder: /assets
+
+slug:
+    encoding: 'ascii'
+    clean_accents: true
+    sanitize_replacement: '_'
+
+collections:
+    - name: case
+      label: Cases
+      label_singular: Case
+      folder: src/content/cases
+      slug: '{{title}}'
+      create: true
+      fields:
+          - { name: id, label: ID, widget: 'id' }
+          - { name: type, label: Type, widget: hidden, default: 'case' }
+          - { name: title, label: Title, widget: string }
+          - { name: abstract, label: Abstract, widget: string }
+          - { name: image, label: Images, widget: image, allow_multiple: false, choose_url: false }
+          - { name: brand, label: Brand, widget: string }
+          - { name: services, label: Services, widget: relation, multiple: true, min: 0, collection: service, search_fields: ['title'], value_field: id, display_fields: ['title'], required: false }
+          - { name: tags, label: Tags, widget: relation, multiple: true, min: 0, collection: tag, search_fields: ['tag'], value_field: id, display_fields: ['tag'], required: false }
+          - { name: header, label: Header, widget: markdown }
+          - name: section1
+            label: Section 1
+            widget: object
+            summary: Section 1
+            collapsed: true
+            fields:
+                - { name: header, label: Header, widget: markdown }
+                - name: bullets
+                  label: Bullets
+                  summary: Bullets
+                  widget: list
+                  collapsed: true
+                  multiple: true
+                  min: 1
+                  max: 4
+                  fields:
+                      - { name: bulletTitle, label: Title, widget: string }
+                      - { name: bulletText, label: Text, widget: string }
+                      - { name: bulletImage, label: Image, widget: image, allow_multiple: false, choose_url: false }
+                - { name: body, label: Content, widget: markdown }
+          - name: section2
+            label: Section 2
+            widget: object
+            summary: Section 2
+            collapsed: true
+            fields:
+                - { name: header, label: Header, widget: markdown }
+                - name: bannerKpi
+                  label: Banner KPI
+                  widget: object
+                  summary: Banner KPI
+                  collapsed: true
+                  fields:
+                      - { name: title, label: Title, widget: string }
+                      - name: kpis
+                        label: KPI
+                        summary: KPI
+                        widget: list
+                        collapsed: true
+                        multiple: true
+                        min: 1
+                        max: 4
+                        fields:
+                            - { name: kpiTitle, label: Title, widget: string }
+                            - { name: kpiText, label: Text, widget: string }
+                            - name: kpiUnit
+                              label: Text
+                              widget: select
+                              required: false
+                              default:
+                              options:
+                                  - { label: '', value: '' }
+                                  - { label: 'Percent', value: 'PERCENT' }
+                                  - { label: 'K', value: 'K' }
+                                  - { label: 'M', value: 'M' }
+          - name: section3
+            label: Section 3
+            widget: object
+            summary: Section 3
+            collapsed: true
+            fields:
+                - { name: header, label: Header, widget: markdown }
+                - name: carruselImages
+                  label: Carrusel of images
+                  summary: Carrusel of images
+                  widget: list
+                  collapsed: true
+                  multiple: true
+                  min: 0
+                  fields:
+                      - { name: carruselImage, label: Carrusel of image, widget: image, allow_multiple: false, choose_url: false }
+                - { name: body, label: Content, widget: markdown }
+                - { name: quote, label: Quote, widget: markdown }
+          - name: section4
+            label: Section 4
+            widget: object
+            summary: Section 4
+            collapsed: true
+            fields:
+                - { name: content, label: Content, widget: markdown }
+          - { name: relatedCase, label: Related Case, widget: relation, multiple: true, min: 0, collection: case, search_fields: ['title'], value_field: id, display_fields: ['title'], required: false }
+
+    - name: service
+      label: Services
+      label_singular: Service
+      folder: src/content/services
+      slug: '{{title}}'
+      create: true
+      fields:
+          - { name: id, label: ID, widget: 'id' }
+          - { name: type, label: Type, widget: hidden, default: 'service' }
+          - { name: title, label: Title, widget: string }
+          - { name: serviceType, label: Service Type, widget: string }
+          - { name: abstract, label: Abstract, widget: string }
+          - name: sections
+            label: Sections
+            summary: Sections
+            widget: list
+            collapsed: true
+            multiple: true
+            min: 1
+            max: 4
+            fields:
+                - { name: sectionTitle, label: Section Title, widget: string }
+                - { name: sectionBody, label: Section Body, widget: markdown }
+
+    - name: post
+      label: Posts
+      label_singular: Post
+      folder: src/content/posts
+      slug: '{{title}}'
+      create: true
+      fields:
+          - { name: id, label: ID, widget: 'id' }
+          - { name: type, label: Type, widget: hidden, default: 'post' }
+          - { name: title, label: Title, widget: string }
+          - { name: subtitle, label: Subtitle, widget: string, required: false }
+          - { name: image, label: Image, widget: image, allow_multiple: false, choose_url: false }
+          - { name: abstract, label: Abstract, widget: string }
+          - { name: author, label: Author, widget: string, required: false }
+          - { name: authorTwitter, label: Twitter, widget: string, required: false }
+          - { name: authorLinkedIn, label: LinkedIn, widget: string, required: false }
+          - { name: date, label: Date, widget: datetime, date_format: 'DD-MM-YYYY', time_format: 'HH:mm' }
+          - { name: readTime, label: Read time, widget: number, default: 0 }
+          - { name: categories, label: Categories, widget: relation, multiple: true, min: 0, collection: category, search_fields: ['category'], value_field: id, display_fields: ['category'], required: false }
+          - { name: tags, label: Tags, widget: relation, multiple: true, min: 0, collection: tag, search_fields: ['tag'], value_field: id, display_fields: ['tag'], required: false }
+          - name: sections
+            label: Sections
+            summary: Sections
+            widget: list
+            collapsed: true
+            multiple: true
+            min: 1
+            fields:
+                - { name: sectionHeader, label: Section Title, widget: text }
+                - { name: sectionBody, label: Section Body, widget: markdown }
+          - name: recommendations
+            label: Recommendations
+            summary: Recommendations
+            widget: list
+            collapsed: true
+            multiple: true
+            min: 0
+            required: false
+            fields:
+                - { name: recommendationTitle, label: Title, widget: string }
+                - name: recommendationType
+                  label: Type
+                  widget: select
+                  multiple: false
+                  default: ''
+                  options:
+                      - { label: '', value: '' }
+                      - { label: 'Book', value: 'book' }
+                      - { label: 'Database', value: 'database' }
+                      - { label: 'Image', value: 'image' }
+                      - { label: 'Music', value: 'music' }
+                      - { label: 'Audio', value: 'audio' }
+                      - { label: 'Video', value: 'video' }
+                      - { label: 'Link', value: 'link' }
+                      - { label: 'Social network', value: 'social' }
+                  required: false
+                - { name: recommendationDescription, label: Description, widget: text }
+
+    - name: tag
+      label: Tags
+      label_singular: Tag
+      folder: src/content/tags
+      slug: '{{tag}}'
+      create: true
+      editor:
+          preview: false
+      fields:
+          - { name: id, label: ID, widget: 'id' }
+          - { name: type, label: Type, widget: hidden, default: 'tag' }
+          - { name: tag, label: Tag, widget: string }
+
+    - name: category
+      label: Categories
+      label_singular: Category
+      folder: src/content/categories
+      slug: '{{category}}'
+      create: true
+      editor:
+          preview: false
+      fields:
+          - { name: id, label: ID, widget: 'id' }
+          - { name: type, label: Type, widget: hidden, default: 'category' }
+          - { name: category, label: Category, widget: string }

@@ -1,0 +1,23 @@
+{
+	"root": true,
+	"env": {
+		"node": true,
+		"browser": true,
+		"amd": true
+	},
+	"extends": ["plugin:vue/essential", "eslint:recommended"],
+	"globals": {
+		"window": "writable",
+		"document": "writable",
+		"Promise": "writable"
+	},
+	"rules": {
+		"no-anonymous-exports-page-templates": "off",
+		"limited-exports-page-templates": "off",
+		"react/prop-types": ["off", { "ignore": true }],
+		"no-unused-labels": ["warn"]
+	},
+	"parserOptions": {
+		"parser": "babel-eslint"
+	}
+}

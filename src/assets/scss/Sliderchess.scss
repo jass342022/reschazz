@@ -1,0 +1,130 @@
+.SliderChess {
+	position: relative;
+	height: auto;
+	width: auto;
+	margin: 0 auto;
+	overflow: hidden;
+	background: $cBlack;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+	.images {
+		height: 100%;
+		width: 100%;
+		display: flex;
+	}
+	.images .img-1 {
+		height: 100%;
+		width: 100%;
+	}
+	.images .img-2 {
+		height: 100%;
+		width: 100%;
+	}
+	.images .img-2 {
+		position: absolute;
+		overflow: hidden;
+	}
+	.img-2 {
+		img {
+			width: auto;
+			height: 100%;
+		}
+	}
+	.slider {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 99;
+		height: 100%;
+	}
+	.slider input {
+		width: 100%;
+		outline: none;
+		background: none;
+		-webkit-appearance: none;
+	}
+	.slider input::-webkit-slider-thumb {
+		height: 1400px;
+		width: 3px;
+		background: none;
+		-webkit-appearance: none;
+		cursor: col-resize;
+	}
+	.slider .drag-line {
+		width: 3px;
+		height: 660px;
+		position: absolute;
+		left: 5%;
+		pointer-events: none;
+	}
+	.slider .drag-line::before,
+	.slider .drag-line::after {
+		position: absolute;
+		width: 1px;
+		width: 50%;
+		height: 100%;
+	}
+
+	.tab_hand {
+		background-position: center;
+		height: 30%;
+		margin-left: 2px;
+		position: absolute;
+	}
+
+	.slider .drag-line span :active {
+		opacity: 0;
+		pointer-events: all;
+	}
+	.opac {
+		visibility: hidden;
+	}
+
+	.oopac {
+		opacity: 0;
+	}
+}
+div.img-1 {
+	img {
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 640px) {
+	.SliderChess {
+		overflow: hidden;
+	}
+	.img-2 {
+		width: 5%;
+	}
+	.slider .drag-line span {
+		top: 60%;
+	}
+	.img-2,
+	.img-1 {
+		width: 800px;
+	}
+
+	.slider .drag-line span {
+		height: 50%;
+
+		position: absolute;
+		margin-left: -28px;
+		z-index: 9;
+		background-position: center;
+	}
+}
+
+@media all and (min-width: 640px) {
+	.slider .drag-line span {
+		top: 80%;
+	}
+
+	.slider .drag-line span {
+		height: 100%;
+		width: 115px;
+		position: absolute;
+		margin-left: -57px;
+		z-index: 9;
+		background-position: center;
+	}
+}

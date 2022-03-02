@@ -1,0 +1,49 @@
+[
+	{
+		"index": 0,
+		"id": "madrid",
+		"title": "Madrid",
+		"open": false,
+		"selected": false,
+		"photosCount": 21,
+		"address": "José Abascal 45. Fl. 5. 28003<br />(+34) 915 921 462",
+		"cover": "Madrid-2.png",
+		"email": "hola@chazzdesign.com",
+		"names": ["Alessandra Serpa", "Ayano Watanabe", "Carolina Miyata", "David Freire", "Diego Cano ", "Javier Arce", "Javier Herrero", "Manrique García", "Martina de Trápaga", "María José Noriega", "Pedro J. Carrascosa", "Pilar de la Banda", "Ricardo Benítez", "Sandra Navarro"]
+	},
+	{
+		"index": 1,
+		"id": "saopaulo",
+		"title": "São Paulo",
+		"open": false,
+		"selected": false,
+		"photosCount": 12,
+		"cover": "Brasil-3.png",
+		"address": "Av. das Nações Unidas, 14171<br />(+55) 11 3245 4787",
+		"email": "ola@chazzdesign.com",
+		"names": ["Higor Franco", "Luiza Futuro", "José Oliveira", "Tatiana Pilnik", "Renam Santos", "Juliana Bach", "Daniel Rocha", "Stéphane Méheux", "Ariel Cardeal", "Flávia Landroni", "Flávia Albo", "Giselle Prado", "Grace Kim"]
+	},
+	{
+		"index": 2,
+		"id": "lima",
+		"title": "Lima",
+		"open": false,
+		"selected": false,
+		"photosCount": 5,
+		"cover": "Peru-1.png",
+		"address": "Av. Javier, Prado Oeste, 2501",
+		"email": "hola.lima@chazzdesign.com",
+		"names": ["Mathieu Reumaux", "Ximena De la Torre-Bueno", "Valeria Ledesma", "Lina María Arias", "Natalia Ibárcena", "Mathieu Reumaux", "Ximena De la Torre-Bueno", "Valeria Ledesma", "Lina María Arias", "Natalia Ibárcena", "Mathieu Reumaux", "Ximena De la Torre-Bueno", "Valeria Ledesma", "Lina María Arias", "Natalia Ibárcena"]
+	},
+	{
+		"index": 3,
+		"id": "lisboa",
+		"title": "Lisboa",
+		"open": false,
+		"selected": false,
+		"cover": "Portugal-2.png",
+		"photosCount": 1,
+		"address": "Praça Duque de Saldanha, 1 - 10º E/F, 1050-094",
+		"email": "ola.lisboa@chazzdesign.com"
+	}
+]
